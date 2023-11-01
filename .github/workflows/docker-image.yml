@@ -16,6 +16,6 @@ jobs:
       run: |
         docker build -t app .
         docker login -u vivekshaurya -p dckr_pat_TIvFqMK-P29qN81f4Qo0ujTb6iE
-        docker tag vivekshaurya/form
+        docker tag app vivekshaurya/form
         docker push vivekshaurya/form
         
