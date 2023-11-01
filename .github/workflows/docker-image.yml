@@ -15,7 +15,7 @@ jobs:
     - name: Build the Docker image
       run: |
         docker build -t app .
-        docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_SECRET }}
+        echo ${{ secrets.DOCKER_SECRET }} docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
         docker tag app vivekshaurya/form
         docker push vivekshaurya/form
         
