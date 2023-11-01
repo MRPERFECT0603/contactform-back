@@ -10,11 +10,11 @@ COPY package.json .
 
 ###  Installing dependencies
 
-RUN npm install --silent
+RUN npm install 
 
 # copy local files to app folder
 COPY . .
 
 EXPOSE 8000
 
-CMD ["npm","start"]
+CMD ["node","server.js"]
