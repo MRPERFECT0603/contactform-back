@@ -57,5 +57,5 @@ app.post('/submit', async(req, res) => {
 
 
 app.listen(port , ()=>{
-    console.log(`The app has been started on the ${port}.`);
+    console.log(`The server  has been started on the ${port}.`);
 });
