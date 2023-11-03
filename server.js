@@ -2,8 +2,8 @@
 const express = require("express");
 const path = require("path");
 const pug  = require("pug");
-const mongoose = require('mongoose');
-const Contact = require("./models/contact");
+// const mongoose = require('mongoose');
+// const Contact = require("./models/contact");
 const port =  8000; // a port number 
 const cors = require("cors");
 
