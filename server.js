@@ -11,12 +11,12 @@ const cors = require("cors");
 
 
 //MONGODB
-mongoose.connect('mongodb://localhost/contacts', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-.then(() => console.log('MongoDB connected'))
-.catch(err => console.error(err));
+// mongoose.connect('mongodb://localhost/contacts', {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true
+// })
+// .then(() => console.log('MongoDB connected'))
+// .catch(err => console.error(err));
 
 //EXPRESS 
 const app = express() // creating an express app
@@ -41,17 +41,17 @@ app.post('/submit', async(req, res) => {
     console.log(email);
     console.log(contact);
     console.log(message);
-    try {
-        // Create a new Contact document and save it to the database
-        const newContact = new Contact({ name, email, contact , message });
-        console.log(newContact);
-        await newContact.save();
+    // try {
+    //     // Create a new Contact document and save it to the database
+    //     const newContact = new Contact({ name, email, contact , message });
+    //     console.log(newContact);
+    //     // await newContact.save();
     
-        res.status(200).send('<h1>Contact saved successfully!</h1>');
-      } catch (error) {
-        console.error(error);
-        res.status(500).send('<h1>Error Saving the Contact!</h1>');
-      }
+    //     res.status(200).send('<h1>Contact saved successfully!</h1>');
+    //   } catch (error) {
+    //     console.error(error);
+    //     res.status(500).send('<h1>Error Saving the Contact!</h1>');
+    //   }
     
 });
 
