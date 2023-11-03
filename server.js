@@ -28,6 +28,7 @@ app.post('/submit/', async(req, res) => {
     //     console.error(error);
     //     res.status(500).send('<h1>Error Saving the Contact!</h1>');
     //   }
+    return res.json({name, email, contact, message});
     
 });
 
